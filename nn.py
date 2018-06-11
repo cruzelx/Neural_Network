@@ -5,7 +5,7 @@ class Perceptron:
         for i in range(len(self.weights)):
            self.weights[i] = random.randint(-1,1)
 
-    def signn(self,n):
+    def activation(self,n):
         print(1/(1+math.exp(-n)))
 
   
@@ -13,7 +13,7 @@ class Perceptron:
         sum=0
         for i in range(len(self.weights)):
             sum += self.weights[i]*inputs[i]
-        self.signn(sum)
+        self.activation(sum)
     
 
 X = Perceptron([1,2,3])
